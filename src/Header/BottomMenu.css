@@ -1,0 +1,210 @@
+.BottomMenu {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  margin: 10px 0 10px 0;
+  color: rgb(158, 155, 151);
+}
+
+.BottomMenu_aa_content {
+  display: none;
+
+  position: fixed;
+  left: 0;
+  height: 0;
+  justify-content: center;
+}
+
+.Bottom_aa:hover > .BottomMenu_aa_content {
+  display: block;
+  transition-duration: 2s;
+  height: 300px;
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.Bottom_aa:hover > h2 {
+  text-decoration: underline;
+  background-color: black;
+}
+.Bottom_aa:hover > h2 > a {
+  color: rgb(10, 128, 88);
+}
+
+.Bottom_aa > h2 {
+  margin: 0;
+  height: 80px;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+h2 > a {
+  color: rgba(70, 69, 72, 0.958);
+  padding: 20px;
+}
+
+.BottomMenu_bb_content {
+  position: fixed;
+  left: 0;
+  display: none;
+  justify-content: center;
+}
+.Bottom_bb:hover > .BottomMenu_bb_content {
+  display: block;
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.BottomMenu_menu {
+  color: rgba(70, 69, 72, 0.958);
+  padding: 20px;
+  font-size: 18px;
+  padding-bottom: 48px;
+}
+.BottomMenu_menu:hover {
+  text-decoration: underline;
+  background-color: black;
+  color: rgb(10, 128, 88);
+}
+
+.BottomMenu > .Bottom_cc > .BottomMenu_cc_content {
+  position: fixed;
+  left: 0;
+  display: none;
+  justify-content: center;
+}
+.BottomMenu > .Bottom_cc:hover > .BottomMenu_cc_content {
+  display: block;
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.BottomMenu_store {
+  color: rgba(70, 69, 72, 0.958);
+  padding: 20px;
+  font-size: 18px;
+  padding-bottom: 48px;
+}
+.BottomMenu_store:hover {
+  text-decoration: underline;
+  background-color: black;
+  color: rgb(10, 128, 88);
+}
+
+.BottomMenu > .Bottom_dd > .BottomMenu_dd_content {
+  position: fixed;
+  left: 0;
+  display: none;
+  justify-content: center;
+}
+.BottomMenu > .Bottom_dd:hover > .BottomMenu_dd_content {
+  display: block;
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.BottomMenu_pesponsibility {
+  color: rgba(70, 69, 72, 0.958);
+  padding: 20px;
+  font-size: 18px;
+  padding-bottom: 48px;
+}
+.BottomMenu_pesponsibility:hover {
+  text-decoration: underline;
+  background-color: black;
+  color: rgb(10, 128, 88);
+}
+.BottomMenu > .Bottom_ee > .BottomMenu_ee_content {
+  position: fixed;
+  left: 0;
+  display: none;
+  justify-content: center;
+}
+.BottomMenu > .Bottom_ee:hover > .BottomMenu_ee_content {
+  display: block;
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.BottomMenu_rewards {
+  color: rgba(70, 69, 72, 0.958);
+  padding: 20px;
+  font-size: 18px;
+  padding-bottom: 48px;
+}
+.BottomMenu_rewards:hover {
+  text-decoration: underline;
+  background-color: black;
+  color: rgb(10, 128, 88);
+}
+
+.BottomMenu > .Bottom_ff > .BottomMenu_ff_content {
+  position: fixed;
+  left: 0;
+  display: none;
+  justify-content: center;
+}
+.BottomMenu > .Bottom_ff:hover > .BottomMenu_ff_content {
+  display: block;
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.BottomMenu_corporate {
+  color: rgba(70, 69, 72, 0.958);
+  padding: 20px;
+  font-size: 18px;
+  padding-bottom: 48px;
+}
+.BottomMenu_corporate:hover {
+  text-decoration: underline;
+  background-color: black;
+  color: rgb(10, 128, 88);
+}
+.BottomMenu > .Bottom_gg > .BottomMenu_gg_content {
+  position: fixed;
+  left: 0;
+  display: none;
+  justify-content: center;
+}
+.BottomMenu > .Bottom_gg:hover > .BottomMenu_gg_content {
+  display: block;
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.BottomMenu_news {
+  color: rgba(70, 69, 72, 0.958);
+  padding: 20px;
+  font-size: 18px;
+  padding-bottom: 48px;
+}
+.BottomMenu_news:hover {
+  text-decoration: underline;
+  background-color: black;
+  color: rgb(10, 128, 88);
+}

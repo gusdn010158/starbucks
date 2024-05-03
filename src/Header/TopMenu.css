@@ -1,0 +1,59 @@
+.TopMenu > nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin: 8px;
+  padding: 0px;
+}
+.line {
+  color: rgba(70, 69, 72, 0.958);
+}
+.line::after {
+  content: "|";
+  color: rgba(209, 206, 215, 0.958);
+  font-size: 17px;
+  padding: 18px;
+}
+
+.menu {
+  top: 10px;
+  right: 0;
+  display: flex;
+}
+
+.sinputfocus {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color: #777;
+  font-size: 12px;
+  transition: width 0.4s;
+}
+.sinput {
+  width: 190px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color: #777;
+  font-size: 12px;
+  transition: width 0.4s;
+}
+.material-icons {
+  position: absolute;
+
+  margin: auto;
+
+  top: 16px;
+  right: 184px;
+  display: flex;
+}
