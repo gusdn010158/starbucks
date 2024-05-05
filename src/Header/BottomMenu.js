@@ -1,24 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./BottomMenu.css";
+import axios from "axios";
 
 function BottomMenu() {
-  // // on이 true일때 seton이 false이니까 ontion을 에서 if mouseover을 하면 on 아니면 seton을 해서 mouseover시 클래스이름이 보이고
-  // //.BottomMenu_coffee>BottomMenu_aa_content display:block가되고 transition:all 2s; overflow:hidden 해서 height:auto로 천천히 보여주게 하는 방법?
+  const [data, setData] = useState();
 
-  // const[display,setDisplay]=useState(false);
-
-  // function outMouseDisplay(index){
-  //     let newDisplay=[...display];
-  //     newDisplay[index]=true;
-  //     setDisplay(newDisplay);
-  // }
-
-  //bottomaa를 hover시 coffee의 이름은 on이 되고 bottommenu_aa_content는 display:block이 되게 한다.
+  useEffect(() => {
+    axios.get("http://localhost:3001/coffee").then((res) => {
+      setData(res.data);
+    });
+  }, []);
 
   return (
     <div className="BottomMenu">
-      <div className="Bottom_aa">
+      {data.map((e, index) => (
+        <div key={index} className="Bottom_aa">
+          <h2>
+            <Link to="/coffee/index.do" className="">
+              {e.title1}
+            </Link>
+          </h2>
+          <div className="BottomMenu_aa_content">
+            <ul className="content_a"></ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default BottomMenu;
+
+{
+  /* <div className="Bottom_aa">
         <h2>
           <a href="/coffee/index.do" className="">
             COFFEE
@@ -240,34 +255,42 @@ function BottomMenu() {
             <h4>공지사항</h4>
           </ul>
         </div>
-      </div>
-    </div>
-  );
+      </div> */
 }
 
-export default BottomMenu;
+// import React, { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
 
-{
-  /* <div>
+// function BottomMenu() {
+//   const [menus, setMenus] = useState([]);
 
-  e.map{(e,index)=>(
-    <>
-<Link to="/">
-  <div>{e.item}</div>
-</Link>
-<div >
-  Q.map{(Q,index)=>(
-  <ul className="content_b">
-    <h4>{Q.two}</h4>
-    <li>{Q.item}</li>
-    <li>{Q.item}</li>
-    <li>{Q.item}</li>
-    <li>{Q.item}</li>
-    <li>{Q.item}</li>
-   </ul>
-   )}
-</div>
-</>
-  )}
-</div> */
-}
+//   useEffect(() => {
+//     fetch("http://localhost:3001/coffee") // JSON Server의 주소로 변경
+//       .then((response) => response.json())
+//       .then((data) => setMenus(data.menus))
+//       .catch((error) => console.error("Error fetching menus:", error));
+//   }, []);
+//   return (
+//     <div className="BottomMenu">
+//       {menus.map((e, index) => (
+//         <div key={index}>
+//           <Link to="/">
+//             <div>{e.title}</div>
+//           </Link>
+//           <div>
+//             {e.Q.map((Q, qIndex) => (
+//               <ul key={qIndex} className="content_b">
+//                 <h4>{Q.category}</h4>
+//                 {Q.item.map((item, i) => (
+//                   <li key={i}>{item}</li>
+//                 ))}
+//               </ul>
+//             ))}
+//           </div>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default BottomMenu;
