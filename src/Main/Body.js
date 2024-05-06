@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Body.css";
 
 function Body() {
@@ -166,20 +166,51 @@ function Body() {
     seven.observe(el);
   });
 
-  const seven2 = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.intersectionRatio > 0) {
-        entry.target.classList.add("o");
-      } else {
-        entry.target.classList.remove("o");
-      }
-    });
-  });
+  // const seven2 = new IntersectionObserver((entries) => {
+  //   // Intersection Observer의 콜백 함수
+  //   entries.forEach((entry) => {
+  //     if (entry.intersectionRatio > 0) {
+  //       // 요소가 교차되면 클래스를 추가합니다.
+  //       entry.target.classList.add("o");
+  //     } else {
+  //       // 요소가 교차되지 않으면 클래스를 제거합니다.
+  //       entry.target.classList.remove("o");
+  //     }
+  //   });
+  // });
 
-  const txt2 = document.querySelectorAll(".Body_seven_div_txt2");
-  txt2.forEach((el) => {
-    seven2.observe(el);
-  });
+  // // 관찰할 대상 요소들을 선택합니다.
+  // const txt2 = document.querySelectorAll(".Body_seven_div_txt2");
+
+  // // 선택한 요소들을 Intersection Observer에 등록하여 관찰합니다.
+  // txt2.forEach((el) => {
+  //   seven2.observe(el);
+  // });
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Intersection Observer 생성
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        // 요소가 교차되면 isVisible 상태를 true로 설정합니다.
+        setIsVisible(entry.isIntersecting);
+      });
+    });
+
+    // 관찰할 대상 요소를 선택합니다.
+    const target = document.querySelector(".BottomMenu");
+
+    // 선택한 요소를 Intersection Observer에 등록하여 관찰합니다.
+    if (target) {
+      observer.observe(target);
+    }
+
+    // 컴포넌트가 언마운트될 때 Intersection Observer를 해제합니다.
+    return () => {
+      observer.unobserve(target);
+    };
+  }, []);
 
   const seven3 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -375,7 +406,7 @@ function Body() {
           <div className="Body_seven_div_img3"></div>
           <div className="Body_seven_div_img4"></div>
           <div className="Body_seven_div_txt1"></div>
-          <div className="Body_seven_div_txt2"></div>
+          <div className={`Body_seven_div_txt2 ${isVisible ? "o" : ""}`}></div>
           <div className="Body_seven_div_button">
             <a href="/store/store_map.do">매장 찾기</a>
           </div>
@@ -386,3 +417,4 @@ function Body() {
 }
 
 export default Body;
+// className="Body_seven_div_txt2"
