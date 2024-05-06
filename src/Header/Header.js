@@ -7,15 +7,17 @@ import BottomMenu from "./BottomMenu";
 function Header() {
   return (
     <div className="header">
-      <Link to="/">
-        <img
-          className="header_logo"
-          src="https://pngimg.com/uploads/starbucks/starbucks_PNG11.png"
-        />
-      </Link>
-      <div className="header_main">
-        <TopMenu />
-        <BottomMenu />
+      <div className="headerin">
+        <Link to="/">
+          <img
+            className="header_logo"
+            src="https://pngimg.com/uploads/starbucks/starbucks_PNG11.png"
+          />
+        </Link>
+        <div className="header_main">
+          <TopMenu />
+          <BottomMenu />
+        </div>
       </div>
     </div>
   );

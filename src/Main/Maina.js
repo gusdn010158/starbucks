@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Body.css";
-
+import styled from "styled-components";
 function Maina() {
   const [Visible, setVisible] = useState(false);
 

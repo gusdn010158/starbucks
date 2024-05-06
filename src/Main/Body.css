@@ -1,5 +1,5 @@
 .Body > .cardhead {
-  height: 150px;
+  height: 120px;
 }
 
 .Body_first {
@@ -57,11 +57,6 @@
   text-align: center;
   color: #633510;
 }
-
-/* .Body_first_Button.t{
-    transition:all 2s;
-    right:35%;
-} */
 
 .Body_second {
   display: flex;
