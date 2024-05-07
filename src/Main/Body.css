@@ -43,7 +43,7 @@
 }
 .Body_first_Button.o {
   transition: all 2s;
-  right: 36%;
+  right: 680px;
 }
 .Body_first_Button.o > a:hover {
   transition: all 2s;
