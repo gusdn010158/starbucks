@@ -29,8 +29,9 @@ function Mainb() {
   return (
     <>
       <section className="Body_third">
-        <div className="Body_third_logo">
+        <div>
           <img
+            className="Body_third_logo"
             src="https://image.istarbucks.co.kr/common/img/main/rewards-logo.png"
             alt="Starbucks Rewards"
           />
@@ -46,7 +47,6 @@ function Mainb() {
                 <br></br>스타벅스 회원이 아니세요? 가입을 통해 리워드 혜택을
                 즐기세요.
               </p>
-              <hr></hr>
             </div>
             <div className="Body_third_top_button">
               <a className="Body_third_top_button_a1" href="/mem/join.do">
@@ -66,12 +66,11 @@ function Mainb() {
               구매하시고, 편리하게 등록하세요!<br></br>카드를 등록하여 스타벅스
               리워드 회원이 되신 후, 첫 구매를 하시면 무료 음료쿠폰을 드립니다!
             </p>
-            <a
-              className="Body_third_buttom_a"
-              href="/msr/sceGift/gift_step1.do"
-            >
-              e-Gift Card 선물하기
-            </a>
+            <div>
+              <a className="Btbuttom_a" href="/msr/sceGift/gift_step1.do">
+                e-Gift Card 선물하기
+              </a>
+            </div>
           </div>
         </div>
       </section>

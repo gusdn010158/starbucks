@@ -143,5 +143,57 @@
         ["공지사항"]
       ]
     }
+  ],
+  "footer": [
+    {
+      "h": "COMPANY",
+      "item1": "한눈에 보기",
+      "item2": "스타벅스 사명",
+      "item3": "스타벅스 소개",
+      "item4": "컴플라이언스",
+      "item5": "국내 뉴스룸",
+      "item6": "세계의 스타벅스",
+      "item7": "글로벌 뉴스룸"
+    },
+    {
+      "h": "CORPORATE SALES",
+      "item1": "단체 및 기업 구매 안내",
+      "item2": "단체 주문 배달 안내",
+      "item3": "",
+      "item4": "",
+      "item5": "",
+      "item6": "",
+      "item7": ""
+    },
+    {
+      "h": "PARTNERSHIP",
+      "item1": "신규 입점 제의",
+      "item2": "협력 고객사 등록신청",
+      "item3": "중개업체 확인",
+      "item4": "",
+      "item5": "",
+      "item6": "",
+      "item7": ""
+    },
+    {
+      "h": "ONLINE COMMUNITY",
+      "item1": "페이스북",
+      "item2": "트위터",
+      "item3": "유튜브",
+      "item4": "인스타그램",
+      "item5": "",
+      "item6": "",
+      "item7": ""
+    },
+    {
+      "h": "RECRUIT",
+      "item1": "채용 소개",
+      "item2": "채용 지원하기",
+      "item3": "",
+      "item4": "",
+      "item5": "",
+      "item6": "",
+      "item7": ""
+    }
   ]
 }

@@ -144,50 +144,68 @@
   width: 130px;
   height: 45px;
 }
-/* .divpia_button.t>a:hover{
-    background-color:#046241;
-    color:#fff;
-  }  */
+.divpia_button.o > a:hover {
+  background-color: #046241;
+  color: #fff;
+}
 
 .Body_third {
   display: flex;
-  justify-content: space-around;
-  padding-top: 30px;
-  padding-bottom: 40px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: #1e3932;
 }
+.Body_third_logo {
+  object-fit: cover;
+  width: 210px;
+  height: 180px;
+  margin-right: 30px;
+}
 .Body_third_content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   color: aliceblue;
   font-size: 20px;
 }
 .Body_third_top {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
 }
-
+.Body_third_top_txt > h2 {
+  font-size: 25px;
+}
 .Body_third_top_txt_p {
-  width: 1200px;
+  font-size: 15px;
 }
 .Body_third_top_button {
-  position: absolute;
-  top: 90px;
-  right: 10%;
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 20px 0px 20px 20px;
 }
 .Body_third_bottom {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.Body_third_buttom_a {
-  position: absolute;
-  top: 40px;
-  right: 6%;
-  width: 220px;
+.Body_third_bottom > p {
+  font-size: 13px;
+  width: 600px;
+}
+
+.Btbuttom_a {
+  padding: 5px 12px 5px 12px;
+  font-size: 16px;
   text-align: center;
   border: 2px solid #fff;
   color: #fff;
   border-radius: 5px;
-  line-height: 50px;
+}
+
+.Btbuttom_a:hover {
+  text-decoration: underline;
 }
 .Body_third_top_button_a1 {
   color: #fff;
@@ -196,7 +214,9 @@
   background-color: #00704a;
   border: 2px solid #00704a;
 }
-
+.Body_third_top_button_a1:hover {
+  text-decoration: underline;
+}
 .Body_third_top_button_a2 {
   color: #fff;
   margin-left: 9px;
@@ -205,7 +225,9 @@
   background-color: transparent;
   border: 2px solid #fff;
 }
-
+.Body_third_top_button_a2:hover {
+  text-decoration: underline;
+}
 .Body_f {
   background-image: url("https://image.istarbucks.co.kr/upload/common/img/main/2022/221220_pc_reserve_bg.png");
   height: 400px;
@@ -228,7 +250,7 @@
   width: 100%;
 }
 
-.Body_f_div_button {
+.Body_f_div_button > a {
   position: absolute;
   left: 33%;
   width: 125px;
@@ -236,19 +258,15 @@
   border: 2px solid #966932;
   transform: translateY(280px);
   text-align: center;
-}
-.Body_f_div_button:hover {
-  transition: all 2s;
-  background-color: #966932;
-}
-.Body_f_div_button > a:hover {
-  color: #fff;
-}
-.Body_f_div_button > a {
   color: #966932;
   font-size: 18px;
   text-align: center;
   line-height: 40px;
+}
+.Body_f_div_button > a:hover {
+  transition: all 2s;
+  background-color: #966932;
+  color: #fff;
 }
 
 .Body_five {
@@ -294,7 +312,7 @@
   height: 600px;
   width: 950px;
 }
-.Body_five_div_button {
+.Body_five_div_button > a {
   position: absolute;
   left: 21%;
   line-height: 40px;
@@ -303,16 +321,11 @@
   width: 125px;
   text-align: center;
   transform: translateY(650px);
-}
-.Body_five_div_button:hover {
-  transition: all 2s;
-  background-color: #fff;
-}
-.Body_five_div_button > a {
   color: #fff;
 }
 .Body_five_div_button > a:hover {
   transition: all 2s;
+  background-color: #fff;
   color: #000;
 }
 
