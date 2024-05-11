@@ -91,11 +91,12 @@ function Mainb() {
               alt="크리스마스를 더욱 특별하게 만들어 줄 원두 크리스마스 블렌드"
             />
           </div>
-          <div className={`Body_first_Button ${Visible ? "o" : ""}`}>
-            <a href="https://www.starbucks.co.kr/coffee/product_view.do?PRODUCT_CD=11135964">
-              자세히 보기
-            </a>
-          </div>
+          <a
+            href="https://www.starbucks.co.kr/coffee/product_view.do?PRODUCT_CD=11148767"
+            className={`Body_first_Button ${Visible ? "o" : ""}`}
+          >
+            자세히 보기
+          </a>
         </div>
       </section>
     </>

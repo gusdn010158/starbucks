@@ -36,26 +36,24 @@
   transform: translateY(400px);
   text-align: center;
   width: 130px;
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 5px;
   border: 2px solid #633510;
   right: 0;
+  line-height: 38px;
+  text-align: center;
+  color: #633510;
 }
 .Body_first_Button.o {
   transition: all 2s;
   right: 680px;
 }
-.Body_first_Button.o > a:hover {
-  transition: all 2s;
-  color: #fff;
-}
+
 .Body_first_Button.o:hover {
   background-color: #633510;
-}
-.Body_first_Button > a {
-  line-height: 38px;
-  text-align: center;
-  color: #633510;
+  transition: all 2s;
+  color: #fff;
+  text-decoration: underline;
 }
 
 .Body_second {
@@ -129,12 +127,7 @@
   position: absolute;
   transition: all 2s;
   opacity: 0;
-}
-.divpia_button.o {
-  opacity: 1;
-  transition-delay: 2.5s;
-}
-.divpia_button > a {
+
   border-radius: 5px;
   font-size: 18px;
   text-align: center;
@@ -144,7 +137,15 @@
   width: 130px;
   height: 45px;
 }
-.divpia_button.o > a:hover {
+.divpia_button.o {
+  transition: all 2s;
+  color: #046241;
+  opacity: 1;
+  transition-delay: 2.5s;
+}
+
+.divpia_button.o:hover {
+  transition: all 2s;
   background-color: #046241;
   color: #fff;
 }
@@ -252,14 +253,14 @@
 
 .Body_f_div_button > a {
   position: absolute;
-  left: 33%;
+  left: 29%;
   width: 125px;
   border-radius: 5px;
   border: 2px solid #966932;
   transform: translateY(280px);
   text-align: center;
   color: #966932;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   line-height: 40px;
 }
@@ -267,6 +268,7 @@
   transition: all 2s;
   background-color: #966932;
   color: #fff;
+  text-decoration: underline;
 }
 
 .Body_five {
@@ -327,6 +329,7 @@
   transition: all 2s;
   background-color: #fff;
   color: #000;
+  text-decoration: underline;
 }
 
 .Body_six {
@@ -356,21 +359,15 @@
   text-align: center;
   border-radius: 5px;
   border: #000 solid;
-  line-height: 45px;
+  line-height: 40px;
   transform: translateY(250px);
+  color: #000;
 }
 .Body_six_div_button:hover {
   transition: all 2s;
   background-color: #000;
-}
-
-.Body_six_div_button > a {
-  font-size: 18px;
-  color: #000;
-}
-.Body_six_div_button > a:hover {
-  transition: all 2s;
   color: #fff;
+  text-decoration: underline;
 }
 
 .Body_seven {
@@ -413,7 +410,7 @@
   position: absolute;
   height: 102px;
   width: 230px;
-  left: 1200px;
+  right: 250px;
   bottom: 0%;
 }
 .Body_seven_div_txt1 {
@@ -443,26 +440,24 @@
 
 .Body_seven_div_button {
   position: absolute;
-  width: 150px;
-  line-height: 50px;
+  width: 130px;
+  line-height: 40px;
   text-align: center;
   border-radius: 5px;
   border: #222 solid;
-  font-size: 20px;
+  font-size: 16px;
+
   top: 80%;
   right: 0;
+  color: #222;
 }
 .Body_seven_div_button.o {
   transition: all 1s;
-  right: 598px;
+  right: 618px;
 }
 .Body_seven_div_button.o:hover {
   transition: all 2s;
   background-color: #222;
-}
-.Body_seven_div_button > a {
-  color: #222;
-}
-.Body_seven_div_button.o > a:hover {
   color: #fff;
+  text-decoration: underline;
 }

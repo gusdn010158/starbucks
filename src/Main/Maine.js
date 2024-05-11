@@ -43,7 +43,7 @@ function Maine() {
             />
           </div>
           <div className="Body_f_div_button">
-            <a href="https://www.starbucks.co.kr/whats_new/newsView.do?seq=4790">
+            <a href="https://www.starbucks.co.kr/whats_new/newsView.do?seq=5400">
               자세히 보기
             </a>
           </div>
@@ -56,7 +56,7 @@ function Maine() {
           <div className={`Body_five_div_txt2 ${Visible ? "o" : ""}`}></div>
           <div className="Body_five_div_img"></div>
           <div className="Body_five_div_button">
-            <a href="/menu/index.do">자세히 보기</a>
+            <a href="https://www.starbucks.co.kr/menu/index.do">자세히 보기</a>
           </div>
         </div>
       </section>

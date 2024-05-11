@@ -13,7 +13,17 @@ function Footer() {
         console.error("Error fetching data: ", error);
       });
   }, []);
-
+  const [fimg, setFimg] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/fimg")
+      .then((response) => {
+        setFimg(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data: ", error);
+      });
+  }, []);
   return (
     <>
       <div className="footer">
@@ -43,28 +53,17 @@ function Footer() {
         </div>
         <div className="footermid">
           <div className="fm_main">
-            <img src="https://image.istarbucks.co.kr/img/event/2022/footer_award_2211_01.jpg" />
-
-            <img src="https://image.istarbucks.co.kr/img/event/2022/footer_award_2211_02.jpg" />
-            <img src="https://image.istarbucks.co.kr/img/event/2022/footer_award_2211_03.jpg" />
-            <img src="https://image.istarbucks.co.kr/img/event/2022/footer_award_2211_04.jpg" />
-            <img src="https://image.istarbucks.co.kr/img/event/2022/footer_award_2211_05.jpg" />
-            <img src="https://image.istarbucks.co.kr/img/event/2022/footer_award_2211_06.jpg" />
-            <img src="https://image.istarbucks.co.kr/img/event/2022/footer_award_2211_07.jpg" />
+            {fimg.map((f) => (
+              <img src={f.img} />
+            ))}
           </div>
         </div>
         <div className="footerbottom">
           <div className="fb_main">
             <div className="fb_maint">
-              <p>개인정보처리방침</p>
-              <p>영상정보처리기기 운영관리 방침</p>
-              <p>홈페이지 이용약관</p>
-              <p>위치정보 이용약관</p>
-              <p>스타벅스 카드 이용약관</p>
-              <p>신세계 유니버스 클럽 이용약관</p>
-              <p>비회원 이용약관</p>
-              <p> My DT Pass 서비스 이용약관</p>
-              <p>윤리경영 핫라인</p>
+              {fimg.map((f) => (
+                <p>{f.text}</p>
+              ))}
             </div>
             <div className="fb_maint">
               <div className="fb_maintb">찾아오시는 길</div>

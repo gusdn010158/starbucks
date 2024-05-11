@@ -36,14 +36,12 @@ function Maina() {
             alt="HAPPY 2023 FIND YOUR LUCK"
           />
         </div>
-        <div className={`divpia_button ${Visible ? "o" : ""}`}>
-          <a
-            className="divpia_a"
-            href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=2111"
-          >
-            자세히 보기
-          </a>
-        </div>
+        <a
+          href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=2476"
+          className={`divpia_button ${Visible ? "o" : ""}`}
+        >
+          자세히 보기
+        </a>
         <div className="divpia_img">
           <div className={`divpia_img1 ${Visible ? "o" : ""}`}>
             <img

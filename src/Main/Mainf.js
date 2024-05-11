@@ -40,9 +40,12 @@ function Mainf() {
               alt=""
             />
           </div>
-          <div className="Body_six_div_button">
-            <a href="/coffee/reserve_magazine_list.do">자세히 보기</a>
-          </div>
+          <a
+            href="https://www.starbucks.co.kr/coffee/reserve_magazine_list.do"
+            className="Body_six_div_button"
+          >
+            자세히 보기
+          </a>
         </div>
       </section>
       <section className="Body_seven">
@@ -54,9 +57,12 @@ function Mainf() {
           <div className={`Body_seven_div_txt1 ${isVisible ? "o" : ""}`}></div>
 
           <div className={`Body_seven_div_txt2 ${isVisible ? "o" : ""}`}></div>
-          <div className={`Body_seven_div_button ${isVisible ? "o" : ""}`}>
-            <a href="/store/store_map.do">매장 찾기</a>
-          </div>
+          <a
+            href="https://www.starbucks.co.kr/store/store_map.do"
+            className={`Body_seven_div_button ${isVisible ? "o" : ""}`}
+          >
+            매장 찾기
+          </a>
         </div>
       </section>
     </>
