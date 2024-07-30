@@ -1,4 +1,3 @@
-import "./App.css";
 import Body from "./Main/Body.js";
 import Header from "./Header/Header.js";
 import React from "react";
