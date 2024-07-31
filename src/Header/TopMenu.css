@@ -6,11 +6,11 @@
   margin: 0px;
   padding: 0px;
 }
-.line {
+.ee {
   color: rgba(70, 69, 72, 0.958);
   font-size: 13px;
 }
-.line::after {
+.ee::after {
   content: "|";
   color: rgba(209, 206, 215, 0.958);
   font-size: 13px;

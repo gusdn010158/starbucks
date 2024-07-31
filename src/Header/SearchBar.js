@@ -3,20 +3,20 @@ import { FaSistrix } from "react-icons/fa";
 import "./TopMenu.css";
 
 function SearchBar() {
-  const [isSearchFocused, setIsSearchFocused] = useState(true);
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
 
   function handleSearchFocus() {
     setIsSearchFocused(true);
   }
 
   function handleSearchBlur() {
-    setIsSearchFocused(true);
+    setIsSearchFocused(false);
   }
 
   return (
-    <div className="menu" onClick={() => setIsSearchFocused(false)}>
+    <div className="menu" onClick={handleSearchFocus}>
       <input
-        className={isSearchFocused ? "sinputfocus" : "sinput"}
+        className={isSearchFocused ? "sinput" : "sinputfocus"}
         type="text"
         onFocus={handleSearchFocus}
         onBlur={handleSearchBlur}
