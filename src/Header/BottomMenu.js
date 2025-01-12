@@ -1,27 +1,13 @@
 import React, { useState, useEffect } from "react";
-
+import styled from "styled-components";
 import Bottomsection from "./Bottomsection";
-import "./BottomMenu.css";
+
 import data from "../server/db.json";
 function BottomMenu() {
   const [sections, setSections] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [toast, setToast] = useState(false);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:3001/menu")
-  //     .then((response) => {
-  //       setSections(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching data: ", error);
-  //     });
-
-  //   return () => {
-  //     setToast(false);
-  //   };
-  // }, []);
   useEffect(() => {
     setSections(data.menu);
   });
@@ -37,7 +23,7 @@ function BottomMenu() {
   };
 
   return (
-    <div className="BottomMenu" onMouseLeave={handleMouseLeave}>
+    <BottomMen onMouseLeave={handleMouseLeave}>
       {sections.map((s) => (
         <Bottomsection
           key={s.id}
@@ -47,8 +33,14 @@ function BottomMenu() {
           toast={toast}
         />
       ))}
-    </div>
+    </BottomMen>
   );
 }
 
 export default BottomMenu;
+const BottomMen = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+`;
