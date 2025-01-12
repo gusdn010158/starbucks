@@ -1,29 +1,36 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import data from "../server/db.json";
 import "./Footer.css";
 function Footer() {
   const [sections, setSections] = useState([]);
-  useEffect(() => {
-    axios
-      .get("http://localhost:3001/footer")
-      .then((response) => {
-        setSections(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data: ", error);
-      });
-  }, []);
   const [fimg, setFimg] = useState([]);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:3001/footer")
+  //     .then((response) => {
+  //       setSections(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching data: ", error);
+  //     });
+  // }, []);
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:3001/fimg")
+  //     .then((response) => {
+  //       setFimg(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching data: ", error);
+  //     });
+  // }, []);
   useEffect(() => {
-    axios
-      .get("http://localhost:3001/fimg")
-      .then((response) => {
-        setFimg(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data: ", error);
-      });
-  }, []);
+    setSections(data.footer);
+  });
+  useEffect(() => {
+    setFimg(data.fimg);
+  });
   return (
     <>
       <div className="footer">

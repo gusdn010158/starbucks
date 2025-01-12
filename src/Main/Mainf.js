@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import "./Body.css";
+import "./Mainf.css";
 function Mainf() {
   const [isVisible, setIsVisible] = useState(false);
 

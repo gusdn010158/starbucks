@@ -1,22 +1,25 @@
 import React from "react";
-import "./Body.css";
+import styled from "styled-components";
 import Mainf from "./Mainf";
 import Maine from "./Maine";
 import Mainb from "./Mainb";
 import Maina from "./Maina";
 
+const BodyContainer = styled.div`
+  .cardhead {
+    height: 120px;
+  }
+`;
+
 function Body() {
   return (
-    <div className="Body">
+    <BodyContainer>
       <div className="cardhead"></div>
-
       <Maina />
-
       <Mainb />
       <Maine />
-
       <Mainf />
-    </div>
+    </BodyContainer>
   );
 }
 

@@ -1,27 +1,30 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+
 import Bottomsection from "./Bottomsection";
 import "./BottomMenu.css";
-
+import data from "../server/db.json";
 function BottomMenu() {
   const [sections, setSections] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [toast, setToast] = useState(false);
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:3001/menu")
-      .then((response) => {
-        setSections(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data: ", error);
-      });
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:3001/menu")
+  //     .then((response) => {
+  //       setSections(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching data: ", error);
+  //     });
 
-    return () => {
-      setToast(false);
-    };
-  }, []);
+  //   return () => {
+  //     setToast(false);
+  //   };
+  // }, []);
+  useEffect(() => {
+    setSections(data.menu);
+  });
 
   const handleMouseOver = (index) => {
     setSelectedIndex(index);
