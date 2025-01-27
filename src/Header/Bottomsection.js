@@ -5,7 +5,7 @@ const BottomItems = styled.div`
   color: rgba(70, 69, 72, 0.958);
   padding: 20px;
   font-size: 15px;
-
+  white-space: nowrap;
   &:hover,
   &.selected {
     text-decoration: underline;

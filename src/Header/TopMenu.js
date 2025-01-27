@@ -20,6 +20,9 @@ const NavList = styled.ul`
   flex-direction: row;
   margin: 0px;
   padding: 0px;
+  @media (max-width: 960px) {
+    display: none; /* 960px 이하에서는 메뉴 숨김 */
+  }
 `;
 
 // TopMenuItem 스타일링

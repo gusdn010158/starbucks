@@ -43,4 +43,7 @@ const BottomMen = styled.div`
   justify-content: space-between;
 
   align-items: center;
+  @media (max-width: 960px) {
+    display: none; /* 960px 이하에서는 메뉴 숨김 */
+  }
 `;

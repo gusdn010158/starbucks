@@ -16,7 +16,7 @@ const InputWrapper = styled.div`
 const Input = styled.input`
   width: ${(props) => (props.isFocused ? "180px" : "36px")};
   height: 34px;
-  padding: 4px 30px 4px 10px; /* 아이콘 크기 고려 */
+  padding: 4px 28px 4px 10px; /* 아이콘 크기 고려 */
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
