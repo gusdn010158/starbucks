@@ -19,6 +19,10 @@ const BodyFirstDivA = styled.div`
   left: 0%;
   transition: all 2s;
   ${(props) => props.visible && "left: 25%;"}
+
+  @media (max-width: 960px) {
+    left: 35%;
+  }
 `;
 
 const BodyFirstDivB = styled.div`
@@ -27,6 +31,9 @@ const BodyFirstDivB = styled.div`
   right: 0%;
   transition: all 2s;
   ${(props) => props.visible && "right: 25%;"}
+  @media (max-width: 960px) {
+    display: none; /* 960px 이하에서는 메뉴 숨김 */
+  }
 `;
 
 const BodyFirstButton = styled.a`
@@ -42,7 +49,9 @@ const BodyFirstButton = styled.a`
   color: #633510;
   transition: all 2s;
   ${(props) => props.visible && "right: 680px;"}
-
+  @media (max-width: 960px) {
+    display: none; /* 960px 이하에서는 메뉴 숨김 */
+  }
   &:hover {
     background-color: #633510;
     color: #fff;
