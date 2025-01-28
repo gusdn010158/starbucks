@@ -8,6 +8,9 @@ import Maina from "./Maina";
 const BodyContainer = styled.div`
   .cardhead {
     height: 120px;
+    @media (max-width: 960px) {
+      height: 0px;
+    }
   }
 `;
 

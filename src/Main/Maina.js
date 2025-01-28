@@ -7,74 +7,125 @@ const BodySecond = styled.section`
   object-fit: fill;
   background-image: url("https://image.istarbucks.co.kr/upload/common/img/main/2023/2023_newyear_top_bg.jpg");
   height: 34vw;
+  @media (max-width: 960px) {
+    height: 1700px;
+  }
 `;
 
 const BodySecondDivPia = styled.div`
   position: relative;
   width: 100%;
-`;
-
-const DivPiaLogo = styled.img`
-  position: absolute;
-  width: 18%;
-  left: 14.5%;
-  transform: translateY(150px);
-  transition: all 2s;
-  opacity: ${(props) => (props.visible ? 1 : 0)};
-  transition-delay: 0.5s;
+  box-sizing: border-box;
+  display: flex;
 `;
 
 const DivPiaImg = styled.div`
-  position: relative;
+  display: flex;
+  justify-content: space-around; /* 이미지 간격 균등 분배 */
+  align-items: center; /* 수직 가운데 정렬 */
   height: 34vw;
-  width: 1519px;
+  width: 50%; /* 부모 컨테이너의 전체 너비를 사용 */
+
+  box-sizing: border-box;
 `;
 
 const DivPiaImg1 = styled.div`
-  position: absolute;
-  left: 50%;
-  transform: translateY(15%);
-  transition: all 2s;
-  opacity: ${(props) => (props.visible ? 1 : 0)};
-  transition-delay: 1s;
-`;
-
-const DivPiaImg2 = styled.div`
-  left: 63%;
-  position: absolute;
-  transform: translateY(50%);
-  transition: all 2s;
-  opacity: ${(props) => (props.visible ? 1 : 0)};
-  transition-delay: 1.5s;
-`;
-
-const DivPiaImg3 = styled.div`
-  left: 78%;
-  position: absolute;
-  transform: translateY(35%);
-  transition: all 2s;
-  opacity: ${(props) => (props.visible ? 1 : 0)};
-  transition-delay: 2s;
-`;
-
-const DivPiaButton = styled.a`
+  flex: 1; /* 동일한 비율로 크기 배분 */
   display: flex;
+  justify-content: center; /* 수평 가운데 정렬 */
+
+  img {
+    width: clamp(1vw, 15vw, 20vw); /* 최소 0px, 최대 700px */
+
+    height: auto;
+    object-fit: contain;
+    transition: opacity 1s, transform 1s; /* 애니메이션 */
+    opacity: ${(props) => (props.visible ? 1 : 0)};
+    transform: ${(props) =>
+      props.visible ? "translateY(0)" : "translateY(20%)"};
+    @media (max-width: 960px) {
+      position: absolute;
+      left: 10%;
+
+      top: 30%;
+
+      width: 40%;
+    }
+  }
+`;
+
+const DivPiaImg2 = styled(DivPiaImg1)`
+  img {
+    padding-top: 80px; /* 최소 0px, 최대 700px */
+
+    transition-delay: 1.5s; /* 각 이미지의 등장 애니메이션 딜레이 설정 */
+
+    @media (max-width: 960px) {
+      top: 40%;
+      left: 60%;
+    }
+  }
+`;
+
+const DivPiaImg3 = styled(DivPiaImg1)`
+  img {
+    transition-delay: 2s; /* 각 이미지의 등장 애니메이션 딜레이 설정 */
+    @media (max-width: 960px) {
+      top: 70%;
+    }
+  }
+`;
+
+const Didd = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding-left: 200px;
+  padding-right: 00px;
+  align-items: center;
   justify-content: center;
-  top: 66%;
-  left: 365px;
-  position: absolute;
+  box-sizing: border-box;
+  @media (max-width: 960px) {
+    padding-left: 0px;
+  }
+`;
+const DivPiaLogo = styled.img`
   transition: all 2s;
   opacity: ${(props) => (props.visible ? 1 : 0)};
-  transition-delay: 2.5s;
-  border-radius: 5px;
+  transition-delay: 0.5s;
+  width: clamp(0px, 100%, 200%);
+  @media (max-width: 960px) {
+    position: absolute;
+    top: 10%;
+    right: 25%;
+    width: 50%;
+  }
+`;
+const DivPiaButton = styled.a`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  line-height: 40px;
+  justify-content: center; /* 수평 가운데 정렬 */
   font-size: 18px;
-  text-align: center;
+  transition-delay: 2.5s;
+  padding: 15px;
+  border-radius: 5px;
+  object-fit: contain;
+  transition: opacity 1s, transform 1s; /* 애니메이션 */
+  opacity: ${(props) => (props.visible ? 1 : 0)};
+  height: 15px;
+
   border: 2px solid #046241;
   color: #046241;
-  line-height: 40px;
-  width: 130px;
-  height: 45px;
 
+  @media (max-width: 960px) {
+    position: absolute;
+    left: 40%;
+
+    bottom: 1%;
+  }
   &:hover {
     transition: all 2s;
     background-color: #046241;
@@ -110,39 +161,42 @@ function Maina() {
   return (
     <BodySecond>
       <BodySecondDivPia>
-        <div>
-          <DivPiaLogo
-            className="divpia_logo"
-            visible={Visible}
-            src="https://image.istarbucks.co.kr/upload/common/img/main/2023/2023_newyear_top_logo.png"
-            alt="HAPPY 2023 FIND YOUR LUCK"
-          />
-        </div>
-        <DivPiaButton
-          href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=2476"
-          className="divpia_button"
-          visible={Visible}
-        >
-          자세히 보기
-        </DivPiaButton>
+        <Didd>
+          {" "}
+          <div>
+            <DivPiaLogo
+              className="divpia_logo"
+              visible={Visible}
+              src="https://image.istarbucks.co.kr/upload/common/img/main/2023/2023_newyear_top_logo.png"
+              alt="HAPPY 2023 FIND YOUR LUCK"
+            />
+          </div>
+          <div>
+            <DivPiaButton
+              href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=2476"
+              className="divpia_button"
+              visible={Visible}
+            >
+              자세히 보기
+            </DivPiaButton>
+          </div>
+        </Didd>
+
         <DivPiaImg>
           <DivPiaImg1 className="divpia_img1" visible={Visible}>
             <img
-              className="tea_img1"
               src="https://image.istarbucks.co.kr/upload/common/img/main/2023/2023_newyear_top_drink_1_1.png"
               alt="골든 미모사 그린 티"
             />
           </DivPiaImg1>
           <DivPiaImg2 className="divpia_img2" visible={Visible}>
             <img
-              className="tea_img2"
               src="https://image.istarbucks.co.kr/upload/common/img/main/2023/2023_newyear_top_drink_2_1.png"
               alt="블랙 햅쌀 고봉 라떼"
             />
           </DivPiaImg2>
           <DivPiaImg3 className="divpia_img3" visible={Visible}>
             <img
-              className="tea_img3"
               src="https://image.istarbucks.co.kr/upload/common/img/main/2023/2023_newyear_top_drink_3_1.png"
               alt="스타벅스 튜메릭 라떼"
             />
