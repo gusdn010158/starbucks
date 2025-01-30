@@ -6,6 +6,9 @@ const BodyFirst = styled.section`
   background-image: url("https://image.istarbucks.co.kr/upload/common/img/main/2023/2023_newyear_promotion_bg.jpg");
   object-fit: fill;
   height: 573px;
+  @media (max-width: 960px) {
+    height: 773px;
+  }
 `;
 
 const BodyFirstDiv = styled.div`
@@ -21,7 +24,7 @@ const BodyFirstDivA = styled.div`
   ${(props) => props.visible && "left: 25%;"}
 
   @media (max-width: 960px) {
-    left: 35%;
+    left: 37%;
   }
 `;
 
@@ -32,7 +35,8 @@ const BodyFirstDivB = styled.div`
   transition: all 2s;
   ${(props) => props.visible && "right: 25%;"}
   @media (max-width: 960px) {
-    display: none; /* 960px 이하에서는 메뉴 숨김 */
+    top: 45%;
+    left: 32%;
   }
 `;
 
@@ -50,7 +54,8 @@ const BodyFirstButton = styled.a`
   transition: all 2s;
   ${(props) => props.visible && "right: 680px;"}
   @media (max-width: 960px) {
-    display: none; /* 960px 이하에서는 메뉴 숨김 */
+    top: 35%;
+    right: 42%;
   }
   &:hover {
     background-color: #633510;
@@ -67,6 +72,9 @@ const BodyThird = styled.section`
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #1e3932;
+  @media (max-width: 960px) {
+    height: 450px;
+  }
 `;
 
 const BodyThirdLogo = styled.img`
@@ -85,14 +93,24 @@ const BodyThirdTop = styled.div`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid black;
+  @media (max-width: 960px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const BodyThirdTopTxt = styled.div`
   h2 {
+    @media (max-width: 960px) {
+      width: 300px;
+    }
     font-size: 25px;
   }
   p {
     font-size: 15px;
+    @media (max-width: 960px) {
+      width: 300px;
+    }
   }
 `;
 
@@ -102,7 +120,9 @@ const BodyThirdTopButton = styled.div`
   justify-content: center;
   align-items: flex-end;
   margin: 20px 0px 20px 20px;
-
+  @media (max-width: 960px) {
+    margin: 20px 0px 20px 0px;
+  }
   a {
     color: #fff;
     border-radius: 5px;
@@ -128,10 +148,16 @@ const BodyThirdBottom = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  @media (max-width: 960px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   p {
     font-size: 13px;
     width: 600px;
+    @media (max-width: 960px) {
+      width: 300px;
+    }
   }
 
   a {

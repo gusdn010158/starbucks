@@ -41,6 +41,7 @@ const DivPiaImg1 = styled.div`
     object-fit: contain;
     transition: opacity 1s, transform 1s; /* 애니메이션 */
     opacity: ${(props) => (props.visible ? 1 : 0)};
+    transition-delay: 1.5s;
     transform: ${(props) =>
       props.visible ? "translateY(0)" : "translateY(20%)"};
     @media (max-width: 960px) {
@@ -58,7 +59,7 @@ const DivPiaImg2 = styled(DivPiaImg1)`
   img {
     padding-top: 80px; /* 최소 0px, 최대 700px */
 
-    transition-delay: 1.5s; /* 각 이미지의 등장 애니메이션 딜레이 설정 */
+    transition-delay: 2s; /* 각 이미지의 등장 애니메이션 딜레이 설정 */
 
     @media (max-width: 960px) {
       top: 40%;
@@ -69,7 +70,7 @@ const DivPiaImg2 = styled(DivPiaImg1)`
 
 const DivPiaImg3 = styled(DivPiaImg1)`
   img {
-    transition-delay: 2s; /* 각 이미지의 등장 애니메이션 딜레이 설정 */
+    transition-delay: 2.5s; /* 각 이미지의 등장 애니메이션 딜레이 설정 */
     @media (max-width: 960px) {
       top: 70%;
     }
@@ -107,29 +108,27 @@ const DivPiaButton = styled.a`
   align-items: center;
   margin: 20px;
   line-height: 40px;
-  justify-content: center; /* 수평 가운데 정렬 */
+  justify-content: center;
   font-size: 18px;
-  transition-delay: 2.5s;
   padding: 15px;
   border-radius: 5px;
-  object-fit: contain;
-  transition: opacity 1s, transform 1s; /* 애니메이션 */
+  transition: opacity 1s, transform 1s;
   opacity: ${(props) => (props.visible ? 1 : 0)};
   height: 15px;
-
   border: 2px solid #046241;
   color: #046241;
+  transition-delay: ${(props) => (props.visible ? "3s" : "0s")};
 
-  @media (max-width: 960px) {
-    position: absolute;
-    left: 40%;
-
-    bottom: 1%;
-  }
   &:hover {
     transition: all 2s;
     background-color: #046241;
     color: #fff;
+  }
+
+  @media (max-width: 960px) {
+    position: absolute;
+    left: 40%;
+    bottom: 1%;
   }
 `;
 
@@ -139,7 +138,9 @@ function Maina() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        setVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setVisible(true); // 한 번만 true로 설정되도록 수정
+        }
       });
     });
 
@@ -147,14 +148,10 @@ function Maina() {
       ".divpia_logo, .divpia_img1, .divpia_img2, .divpia_img3, .divpia_button"
     );
 
-    targets.forEach((target) => {
-      observer.observe(target);
-    });
+    targets.forEach((target) => observer.observe(target));
 
     return () => {
-      targets.forEach((target) => {
-        observer.unobserve(target);
-      });
+      targets.forEach((target) => observer.unobserve(target));
     };
   }, []);
 

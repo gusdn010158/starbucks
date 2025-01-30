@@ -5,6 +5,9 @@ const BodyF = styled.section`
   background-image: url("https://image.istarbucks.co.kr/upload/common/img/main/2022/221220_pc_reserve_bg.png");
   height: 400px;
   object-fit: fill;
+  @media (max-width: 960px) {
+    height: 500px;
+  }
 `;
 
 const BodyFDiv = styled.div`
@@ -24,9 +27,13 @@ const BodyFDivTxt = styled.div`
 
 const BodyFDivLogo = styled.div`
   position: absolute;
+
   img {
     object-fit: cover;
     width: 100%;
+    @media (max-width: 960px) {
+      height: 500px;
+    }
   }
 `;
 
@@ -41,7 +48,12 @@ const BodyFDivButton = styled.a`
   color: #966932;
   font-size: 16px;
   line-height: 40px;
-
+  @media (max-width: 960px) {
+    width: 250px;
+    line-height: 70px;
+    font-size: 30px;
+    left: 35%;
+  }
   &:hover {
     transition: all 2s;
     background-color: #966932;

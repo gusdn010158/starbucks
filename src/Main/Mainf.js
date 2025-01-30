@@ -47,6 +47,9 @@ const BodySeven = styled.section`
   background-image: url("https://www.starbucks.co.kr/common/img/main/store_bg.jpg");
   height: 400px;
   position: relative;
+  @media (max-width: 960px) {
+    height: 900px;
+  }
 `;
 
 const BodySevenDiv = styled.div`
@@ -100,6 +103,11 @@ const BodySevenDivTxt1 = styled.div`
   right: 0%;
   transition: all 1s;
   ${(props) => props.visible && "right: 20%;"}
+
+  @media (max-width: 960px) {
+    right: 28%;
+    top: 45%;
+  }
 `;
 
 const BodySevenDivTxt2 = styled.div`
@@ -111,6 +119,10 @@ const BodySevenDivTxt2 = styled.div`
   position: absolute;
   transition: all 1s;
   ${(props) => props.visible && "right: 388px;"}
+  @media (max-width: 960px) {
+    right: 28%;
+    top: 60%;
+  }
 `;
 
 const BodySevenDivButton = styled.a`
@@ -132,6 +144,10 @@ const BodySevenDivButton = styled.a`
     background-color: #222;
     color: #fff;
     text-decoration: underline;
+  }
+
+  @media (max-width: 960px) {
+    right: 42%;
   }
 `;
 
