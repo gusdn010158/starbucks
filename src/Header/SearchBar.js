@@ -16,7 +16,7 @@ const InputWrapper = styled.div`
 const Input = styled.input`
   width: ${(props) => (props.isFocused ? "180px" : "36px")};
   height: 34px;
-  padding: 4px 28px 4px 10px; /* 아이콘 크기 고려 */
+  padding: 4px 28px 4px 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
@@ -29,11 +29,11 @@ const Input = styled.input`
 
 const IconContainer = styled.div`
   position: absolute;
-  right: 10px; /* input 내부 오른쪽 여백 */
+  right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: none; /* 아이콘 클릭 불가능 처리 */
+  pointer-events: none;
 `;
 
 function SearchBar() {

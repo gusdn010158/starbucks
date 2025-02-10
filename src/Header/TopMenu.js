@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import styled from "styled-components";
 
-// TopMenu 전체 스타일링
 const TopMenuWrapper = styled.div`
   .menu {
     right: 0;
@@ -11,7 +10,6 @@ const TopMenuWrapper = styled.div`
   }
 `;
 
-// nav 안의 ul 스타일링
 const NavList = styled.ul`
   list-style: none;
   display: flex;
@@ -21,11 +19,10 @@ const NavList = styled.ul`
   margin: 0px;
   padding: 0px;
   @media (max-width: 960px) {
-    display: none; /* 960px 이하에서는 메뉴 숨김 */
+    display: none;
   }
 `;
 
-// TopMenuItem 스타일링
 const TopMenuItemWrapper = styled.li`
   color: rgba(70, 69, 72, 0.958);
   font-size: 13px;
@@ -42,7 +39,6 @@ const TopMenuItemWrapper = styled.li`
   }
 `;
 
-// Link 스타일링
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: black;

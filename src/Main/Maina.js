@@ -21,25 +21,25 @@ const BodySecondDivPia = styled.div`
 
 const DivPiaImg = styled.div`
   display: flex;
-  justify-content: space-around; /* 이미지 간격 균등 분배 */
-  align-items: center; /* 수직 가운데 정렬 */
+  justify-content: space-around;
+  align-items: center;
   height: 34vw;
-  width: 50%; /* 부모 컨테이너의 전체 너비를 사용 */
+  width: 50%;
 
   box-sizing: border-box;
 `;
 
 const DivPiaImg1 = styled.div`
-  flex: 1; /* 동일한 비율로 크기 배분 */
+  flex: 1;
   display: flex;
-  justify-content: center; /* 수평 가운데 정렬 */
+  justify-content: center;
 
   img {
-    width: clamp(1vw, 15vw, 20vw); /* 최소 0px, 최대 700px */
+    width: clamp(1vw, 15vw, 20vw);
 
     height: auto;
     object-fit: contain;
-    transition: opacity 1s, transform 1s; /* 애니메이션 */
+    transition: opacity 1s, transform 1s;
     opacity: ${(props) => (props.visible ? 1 : 0)};
     transition-delay: 1.5s;
     transform: ${(props) =>
@@ -57,9 +57,9 @@ const DivPiaImg1 = styled.div`
 
 const DivPiaImg2 = styled(DivPiaImg1)`
   img {
-    padding-top: 80px; /* 최소 0px, 최대 700px */
+    padding-top: 80px;
 
-    transition-delay: 2s; /* 각 이미지의 등장 애니메이션 딜레이 설정 */
+    transition-delay: 2s;
 
     @media (max-width: 960px) {
       top: 40%;
@@ -70,7 +70,7 @@ const DivPiaImg2 = styled(DivPiaImg1)`
 
 const DivPiaImg3 = styled(DivPiaImg1)`
   img {
-    transition-delay: 2.5s; /* 각 이미지의 등장 애니메이션 딜레이 설정 */
+    transition-delay: 2.5s;
     @media (max-width: 960px) {
       top: 70%;
     }
@@ -139,7 +139,7 @@ function Maina() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setVisible(true); // 한 번만 true로 설정되도록 수정
+          setVisible(true);
         }
       });
     });

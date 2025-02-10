@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaBars } from "react-icons/fa"; // 햄버거 아이콘
+import { FaBars } from "react-icons/fa";
 import styled from "styled-components";
 import TopMenu from "./TopMenu";
 import BottomMenu from "./BottomMenu";
@@ -24,12 +24,12 @@ const HeaderIn = styled.div`
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin-right: clamp(0px, 10vw, 700px); /* 최소 0px, 최대 700px */
-  margin-left: clamp(0px, 10vw, 700px); /* 최소 0px, 최대 700px */
+  margin-right: clamp(0px, 10vw, 700px);
+  margin-left: clamp(0px, 10vw, 700px);
 
   @media (max-width: 960px) {
-    margin-right: 20px; /* 화면 작아지면 로고 크기 조정 */
-    margin-left: 20px; /* 화면 작아지면 로고 크기 조정 */
+    margin-right: 20px;
+    margin-left: 20px;
   }
 `;
 
@@ -38,7 +38,7 @@ const HeaderLogo = styled.img`
   object-fit: cover;
 
   @media (max-width: 960px) {
-    width: 60px; /* 화면 작아지면 로고 크기 조정 */
+    width: 60px;
   }
 `;
 
@@ -52,7 +52,7 @@ const HeaderMain = styled.div`
 `;
 
 const MenuIcon = styled.div`
-  display: none; /* 기본적으로 숨김 */
+  display: none;
 
   @media (max-width: 960px) {
     display: flex;
@@ -67,13 +67,12 @@ const MenuIcon = styled.div`
 function Header() {
   const [isMobile, setIsMobile] = useState(false);
 
-  // 화면 크기를 감지하여 isMobile 상태 업데이트
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 960);
     };
 
-    handleResize(); // 초기값 설정
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -84,7 +83,6 @@ function Header() {
   return (
     <HeaderWrapper>
       <HeaderIn>
-        {/* 로고 */}
         <Link to="/">
           <HeaderLogo
             src="https://pngimg.com/uploads/starbucks/starbucks_PNG11.png"
@@ -92,11 +90,9 @@ function Header() {
           />
         </Link>
 
-        {/* 메뉴 또는 아이콘 */}
         <HeaderMain>
           {!isMobile ? (
             <>
-              {/* 데스크탑에서는 메뉴 표시 */}
               <TopMenu />
               <BottomMenu />
             </>
